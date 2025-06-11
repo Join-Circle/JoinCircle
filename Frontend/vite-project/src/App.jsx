@@ -1,13 +1,13 @@
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from '@/components/Navbar'
-import BackgroundSection from '@/components/BackgroundSection'
-import PopularCommunities from '@/components/PopularCommunities'
-import AboutSection from '@/components/AboutSection'
-import Footer from '@/components/Footer'
-import Home from '@/pages/Home'
-import Communities from '@/pages/Communities'
+import Navbar from './components/Navbar'
+import BackgroundSection from './components/BackgroundSection'
+import PopularCommunities from './components/PopularCommunities'
+import AboutSection from './components/AboutSection'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Communities from './pages/Communities';
 
 function App() {
   return (
