@@ -1,8 +1,8 @@
-import Navbar from "@/components/Navbar";
-import BackgroundSection from "@/components/BackGroundSection";
-import PopularCommunities from "@/components/PopularCommunities";
-import AboutSection from "@/components/AboutSection";
-import Footer from "@/components/Footer";
+import Navbar from "./components/Navbar";
+import BackgroundSection from "./components/BackGroundSection";
+import PopularCommunities from "./components/PopularCommunities";
+import AboutSection from "./components/AboutSection";
+import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
