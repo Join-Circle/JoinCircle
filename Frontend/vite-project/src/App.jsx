@@ -6,10 +6,8 @@ export default function HomePage() {
   return (
     <div className="text-gray-900 dark:text-white">
       <Navbar />
-      {/* <BackGround /> */}
-      {/* <PopularCommunities /> */}
       <AboutSection />
-      {/* <Footer /> */}
+      {/* <Footer />  */}
     </div>
   );
 }
