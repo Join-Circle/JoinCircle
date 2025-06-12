@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Background from "@/components/BackGround";
+import BackgroundSection from "@/components/BackGroundSection";
 import PopularCommunities from "@/components/PopularCommunities";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
