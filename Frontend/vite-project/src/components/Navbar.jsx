@@ -1,75 +1,89 @@
-import React from "react";
 import Logo from "../images/logo.png";
+import React, { useState } from "react";
 
-export default function Navbar() {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header>
-      <div className="px-3 py-2 bg-black text-white border-bottom">
-        <div className="container">
-          <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a
-              href="/"
-              className="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
-            >
-              <img src={Logo} alt="Logo" width="100" height="75" />
-            </a>
+    <nav className="border-b border-gray-800 bg-black">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a
+  href="#"
+  className="flex items-center space-x-3 rtl:space-x-reverse no-underline focus:outline-none focus:ring-0"
+>
+  <img src={Logo} className="h-8" alt="Logo" />
+  <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+    JoinCircle
+  </span>
+</a>
 
-            <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-              <li>
-                <a href="#" className="nav-link text-secondary">
-                  <i className="bi bi-house d-block mx-auto mb-1"></i>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link text-white">
-                  <i className="bi bi-speedometer2 d-block mx-auto mb-1"></i>
-                  Dashboard
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link text-white">
-                  <i className="bi bi-table d-block mx-auto mb-1"></i>
-                  Orders
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link text-white">
-                  <i className="bi bi-grid d-block mx-auto mb-1"></i>
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link text-white">
-                  <i className="bi bi-people-fill d-block mx-auto mb-1"></i>
-                  Customers
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="px-3 py-2 border-bottom mb-3">
-        <div className="container d-flex flex-wrap justify-content-center">
-          <form className="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-            <input
-              type="search"
-              className="form-control"
-              placeholder="Search..."
-              aria-label="Search"
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          type="button"
+          className="inline-flex items-center justify-center p-2 w-10 h-10 text-white rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500"
+          aria-controls="navbar-hamburger"
+          aria-expanded={isOpen}
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 1h15M1 7h15M1 13h15"
             />
-          </form>
-          <div className="text-end">
-            <button type="button" className="btn btn-light text-dark me-2">
-              Login
-            </button>
-            <button type="button" className="btn btn-primary">
-              Sign-up
-            </button>
-          </div>
+          </svg>
+        </button>
+        <div
+          className={`${isOpen ? "block" : "hidden"} w-full mt-4`}
+          id="navbar-hamburger"
+        >
+          <ul className="flex flex-col font-medium rounded-lg bg-gray-900">
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-white bg-gray-800 rounded-sm"
+                aria-current="page"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-white hover:bg-gray-800"
+              >
+                Login
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-white hover:bg-gray-800"
+              >
+                SignUp
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-white hover:bg-gray-800"
+              >
+                Support
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
+    </nav>
   );
-}
+};
+
+export default Navbar;
