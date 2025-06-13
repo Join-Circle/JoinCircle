@@ -6,8 +6,8 @@ const Footer = () => {
         {/* Top CTA */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 border-b border-gray-700 pb-10">
           <div>
-            <h2 className="font-semibold mb-3">Create your own JoinCircle group.</h2>
-            <button className="mt-2 bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-400 transition">
+            <h2 className="font-semibold text-3xl mb-3">Create your own JoinCircle group.</h2>
+            <button className="mt-2 bg-white text-black font-semibold px-4 py-2 text-xl rounded hover:bg-gray-400 transition">
               Get Started
             </button>
           </div>
@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="grid grid-cols-3 md:grid-cols-3 gap-20 w-full md:w-auto">
             {/* Column 1 */}
             <div>
-              <h3 className="font-semibold mb-3 text-white">Your Account</h3>
+              <h3 className="font-semibold mb-3 text-xl text-white">Your Account</h3>
               <ul className="space-y-1 list-none">
                 <li><a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">Sign up</a></li>
                 <li><a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">Log in</a></li>
@@ -26,7 +26,7 @@ const Footer = () => {
 
             {/* Column 2 */}
             <div>
-              <h3 className="font-semibold mb-3 text-white">Discover</h3>
+              <h3 className="font-semibold mb-3 text-xl text-white">Discover</h3>
               <ul className="space-y-1 list-none">
                 <li><a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">Groups</a></li>
                 <li><a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">Calendar</a></li>
@@ -40,7 +40,7 @@ const Footer = () => {
 
             {/* Column 3 */}
             <div>
-              <h3 className="font-semibold mb-3 text-white">JoinCircle</h3>
+              <h3 className="font-semibold mb-3 text-xl text-white">JoinCircle</h3>
               <ul className="space-y-1 list-none">
                 <li><a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">About</a></li>
                 <li><a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">Blog</a></li>
@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex justify-center md:justify-start items-center mt-8 gap-5">
+        <div className="flex justify-center md:justify-start items-center mt-8 gap-8">
           <span className="text-white text-xl">Follow us</span>
           <img src="/src/assets/facebook.svg" alt="Facebook" className="w-5 h-5 cursor-pointer filter invert hover:opacity-75" />
           <img src="/src/assets/X.svg" alt="Twitter" className="w-4 h-4 cursor-pointer filter invert hover:opacity-75" />
@@ -64,7 +64,7 @@ const Footer = () => {
 
         {/* Bottom Links */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-6 text-gray-400 text-xs gap-3">
-          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+          <div className="flex flex-wrap gap-6 justify-center md:justify-start">
             <a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">Terms of Service</a>
             <a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">Privacy Policy</a>
             <a href="#" className="text-[16px] text-gray-400 hover:text-white no-underline">Cookie Policy</a>
