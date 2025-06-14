@@ -5,7 +5,7 @@ const BackgroundSection = () => {
     <section
       className="h-screen w-full flex flex-col justify-center items-center px-4 text-center bg-cover bg-bottom bg-no-repeat"
       style={{
-        backgroundImage: "linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/BG.png')",
+        backgroundImage: "linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/bg2.png')",
       }}
     >
       <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 z-10">
