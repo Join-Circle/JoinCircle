@@ -11,7 +11,7 @@ const Navbar = () => {
   href="#"
   className="flex items-center space-x-3 rtl:space-x-reverse no-underline focus:outline-none focus:ring-0"
 >
-  <img src={Logo} className="h-8" alt="Logo" />
+  <img src={Logo} className="h-15" alt="Logo" />
   <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
     JoinCircle
   </span>
