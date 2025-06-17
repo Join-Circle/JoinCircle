@@ -11,6 +11,7 @@ const Home = () => {
         date="Sun, Jun 30"
         time="10:00 AM IST"
         buttonLabel="Join Now"
+         navigateTo="/animal"
       />
       <EventCard
         image="/sports.jpg"
@@ -19,6 +20,7 @@ const Home = () => {
         date="Sat, Jun 14"
         time="2:30 PM IST"
         buttonLabel="Free Seminar"
+         navigateTo="/sports"
       />
       <EventCard
         image="/movie.jpg"
@@ -27,6 +29,7 @@ const Home = () => {
         date="Sun, Jun 30"
         time="10:00 AM IST"
         buttonLabel="Join Now"
+         navigateTo="/movie"
       />
       <EventCard
         image="/cafe.jpg"
@@ -35,6 +38,7 @@ const Home = () => {
         date="Sun, Jun 30"
         time="10:00 AM IST"
         buttonLabel="Join Now"
+         navigateTo="/cafe"
       />
       <EventCard
         image="/hack.jpg"
@@ -43,14 +47,16 @@ const Home = () => {
         date="Sun, Jun 30"
         time="10:00 AM IST"
         buttonLabel="Join Now"
+         navigateTo="/hack"
       />
         <EventCard
-        image="/eventc.jpg"
+        image="/event.jpg"
         title="Wildlife Awareness Meetup"
         location="Central Park, Delhi"
         date="Sun, Jun 30"
         time="10:00 AM IST"
         buttonLabel="Join Now"
+         navigateTo="/event"
       />
     </div>
   );
