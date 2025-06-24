@@ -11,6 +11,7 @@ import MoviePage from "./pages/MoviePage"
 import CafePage from "./pages/CafePage"
 import HackathonPage from "./pages/HackathonPage"
 
+
 export default function HomePage() {
    return (
     <Router>
@@ -32,6 +33,7 @@ export default function HomePage() {
           <Route path="/movie" element={<MoviePage />} />
           <Route path="/hack" element={<HackathonPage />} />
           <Route path="/cafe" element={<CafePage />} />
+          
         </Routes>
         <Footer />
       </div>

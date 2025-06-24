@@ -1,21 +1,24 @@
 import Logo from "../images/logo.png";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useClerk } from "@clerk/clerk-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { openSignIn, openSignUp } = useClerk();
 
   return (
     <nav className="border-b border-gray-800 bg-black">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
-  href="#"
-  className="flex items-center space-x-3 rtl:space-x-reverse no-underline focus:outline-none focus:ring-0"
->
-  <img src={Logo} className="h-15" alt="Logo" />
-  <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-    JoinCircle
-  </span>
-</a>
+          href="#"
+          className="flex items-center space-x-3 rtl:space-x-reverse no-underline focus:outline-none focus:ring-0"
+        >
+          <img src={Logo} className="h-12" alt="Logo" /> 
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+            JoinCircle
+          </span>
+        </a>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -41,43 +44,45 @@ const Navbar = () => {
             />
           </svg>
         </button>
+
         <div
           className={`${isOpen ? "block" : "hidden"} w-full mt-4`}
           id="navbar-hamburger"
         >
           <ul className="flex flex-col font-medium rounded-lg bg-gray-900">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="block py-2 px-3 text-white bg-gray-800 rounded-sm"
-                aria-current="page"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white hover:bg-gray-800"
+              {/* ✅ Changed from Link to button for Clerk modal */}
+              <button
+                onClick={openSignIn}
+                className="text-left block w-full py-2 px-3 text-white hover:bg-gray-800"
               >
                 Login
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white hover:bg-gray-800"
+              {/* ✅ Same here: no routing, just modal */}
+              <button
+                onClick={openSignUp}
+                className="text-left block w-full py-2 px-3 text-white hover:bg-gray-800"
               >
                 SignUp
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/support"
                 className="block py-2 px-3 text-white hover:bg-gray-800"
               >
                 Support
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
